@@ -34,13 +34,13 @@
 
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 	<header class="container">
 		<a href="#" class="logo">
-			<img src="img/logo.svg" alt="Hackea Tu Ciudad">
+			<img src="img/logo.svg" onclick="revealhome();" alt="Hackea Tu Ciudad">
 		</a>
 		<nav class="main">
 			<ul class="cf u-full-width">
@@ -71,17 +71,17 @@
 			<section class="agenda">
 				<div class="block main">
 					<h4>Speed Talks</h4>
-					<ul class="cf">
-						<li>La tecnolog&iacute;a C&iacute;vica como industria emergente y modelo de negocio ............................................................. 10:00 A.M.</li>
-						<li>De usuario a ciudadano: aplicaciones cívicas para el quehacer democrático ................................................. 10:30 A.M.</li>
-						<li>Casos de éxito en el mundo de la tecnología cívica ............................................................. 12:50 P.M.</li>
-						<li>Civic Tech Fuck-Ups ......................................... 01:30 P.M.</li>
+					<ul class="">
+						<li>La tecnolog&iacute;a C&iacute;vica como industria emergente y modelo de negocio <span class="dots">.............................................................</span> 10:00 A.M.</li>
+						<li>De usuario a ciudadano: aplicaciones cívicas para el quehacer democrático<span class="dots"> ................................................. </span>10:30 A.M.</li>
+						<li>Casos de éxito en el mundo de la tecnología cívica <span class="dots"> .............................................................</span> 12:50 P.M.</li>
+						<li>Civic Tech Fuck-Ups<span class="dots"> .........................................</span> 01:30 P.M.</li>
 					</ul>
 				</div>
 				<div class="block main">
 					<h4>Taller</h4>
-					<ul class="cf">
-						<li>Evitando el solucionismo: ¿Cómo sé si esta problemática puede resolverse a través de tecnología?  .................................... 10:00 A.M.</li>
+					<ul class="">
+						<li>Evitando el solucionismo: ¿Cómo sé si esta problemática puede resolverse a través de tecnología?<span class="dots">  ....................................</span> 10:00 A.M.</li>
 					</ul>
 				</div>
 				<div class="block apink">
@@ -89,17 +89,54 @@
 				</div>
 				<div class="block main">
 					<h4>Talleres simult&aacute;neos</h4>
-					<ul class="cf">
-						<li>Aprende a programar: YouthSpark ............................. 10:00 A.M.</li>
-						<li>&iquest;C&oacute;mo estructurar una idea de producto tecnol&oacute;gico? ......... 10:00 A.M.</li>
+					<ul class="">
+						<li>Aprende a programar: YouthSpark <span class="dots">............................. </span> 10:00 A.M.</li>
+						<li>&iquest;C&oacute;mo estructurar una idea de producto tecnol&oacute;gico?<span class="dots"> ......... </span> 10:00 A.M.</li>
 						<li>Visualizaciones de datos en productos de tecnolog&iacute;a c&iacute;vica .. 10:00 A.M.</li>
-						<li>Pitchea tu idea c&iacute;vica ...................................... 12:00 P.M.</li>
+						<li>Pitchea tu idea c&iacute;vica <span class="dots"> ......................................</span> 12:00 P.M.</li>
 					</ul>
 				</div>
 			</section>
 
 		</section>
-		<section class="gdl"></section>
+		<section class="gdl">
+			<h2>Guadalajara</h2>
+			<h3 class="sub"><a href="#">9 de abril</a> | <a href="#">@CUAAD, UDG</a></h3>
+			<a href="#" class="waves-effect waves-light register btn">Reg&iacute;strate aqu&iacute;</a>
+			<nav class="tabs u-full-width">
+				<ul class="cf u-full-width">
+					<li class="active"><a href="#">Agenda</a></li>
+					<li><a href="#">&iquest;C&oacute;mo llego?</a></li>
+					<li><a href="#">FAQ</a></li>
+				</ul>
+			</nav>
+			<section class="agenda">
+				<div class="block main">
+					<h4>Speed Talks</h4>
+					<ul class="">
+						<li>Orientando el uso de las tecnologías emergentes a ámbitos sociales <span class="dots">.............................................................</span> 10:00 A.M.</li>
+						<li>Casos de éxito en el mundo de la tecnología cívica <span class="dots"> .............................................................</span> 12:50 P.M.</li>
+						<li>Evitando el solucionismo. ¿Cómo sé si esta problemática se puede resolver con tecnología?<span class="dots"> .........................................</span> 01:30 P.M.</li>
+					</ul>
+				</div>
+				
+				<div class="block apink">
+					<h4>Break / Networking</h4>
+				</div>
+				<div class="block main">
+					<h4>Talleres simult&aacute;neos</h4>
+					<ul class="">
+						<li>Carto DB: <span class="dots">............................. </span> 10:00 A.M.</li>
+						<li>Arduino<span class="dots"> ......... </span> 10:00 A.M.</li>
+						<li>Prototipado Rápido<span class="dots"> ......................................</span> 12:00 P.M.</li>
+					</ul>
+				</div>
+			</section>
+
+			
+
+
+		</section>
 		<section class="yourCity"></section>
 		<section class="pitch"></section>
 	</div>
@@ -125,6 +162,24 @@
 			});
 		});
 	});	
+
+	function revealhome(){
+		$('.content section.active').removeClass('active').fadeOut('fast', function(){
+				$('.home').fadeIn('fast').addClass('active');
+		});
+
+	}
+</script>
+<script>
+	$( window ).resize(function(){
+		if ($(window).width() < 500) {
+   			$('.dots').html("...");
+		}
+		else {
+		   $('.dots').html(".............................");
+		}
+	});
+
 </script>
 </body>
 </html>
