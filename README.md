@@ -7,7 +7,7 @@
 Esta página es donde estaremos desplegando los eventos en las ciudades y universidades participantes.
 
 ##Instrucciones de uso
-
+Este proyecto requiere mínimos conocimientos en [SASS](http://sass-lang.com/install)para trabajar en él.
 
 ##Dónde obtener ayuda
 
