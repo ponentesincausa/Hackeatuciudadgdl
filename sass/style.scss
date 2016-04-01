@@ -1,17 +1,17 @@
 @charset "utf-8";
 @mixin valign-parent{
-	display:table; 
+	display:table;
 	height: 100%;
 	width: 100%;
 }
 @mixin valign{
-	display:table-cell; 
+	display:table-cell;
 	vertical-align:middle;
 }
 @mixin transition($prop, $time, $opt: null, $fn: null) {
-	transition: $prop $time $fn $opt; 
-	-moz-transition: $prop $time $fn $opt; 
-	-webkit-transition: $prop $time $fn $opt; 
+	transition: $prop $time $fn $opt;
+	-moz-transition: $prop $time $fn $opt;
+	-webkit-transition: $prop $time $fn $opt;
 	-o-transition: $prop $time $fn $opt;
 }
 @mixin transform($trans) {
@@ -23,10 +23,10 @@
 	background-color: rgba($color,$alpha);
 }
 @mixin bgsize($size){
-	-webkit-background-size: $size; 
-	-moz-background-size: $size; 
-	-o-background-size: $size; 
-	-ms-background-size: $size; 
+	-webkit-background-size: $size;
+	-moz-background-size: $size;
+	-o-background-size: $size;
+	-ms-background-size: $size;
 	background-size: $size;
 }
 @mixin block-bl($color){
@@ -37,7 +37,7 @@
 }
 $main: #15a7b7;
 $bg: #f1e8d7;
-$dkpurple: #29093f;
+$dkteal: #17a7b7;
 $apink: #f06081;
 $pyellow: #f1dc6b;
 $peach: #f59187;
@@ -45,7 +45,7 @@ $text: $apink;
 $colors: (
 	main: $main,
 	bg: $bg,
-	dkpurple: $dkpurple,
+	dkteal: $dkteal,
 	apink: $apink,
 	pyellow: $pyellow,
 	peach: $peach,
@@ -107,7 +107,7 @@ body{background: $bg;}
 }
 p{color: $text;}
 h1, h2, h3, h4, h5, h6{
-	color: $dkpurple;
+	color: $dkteal;
 	font-family: 'AndaleMono', sans-serif;
 	margin: 0;
 }
@@ -140,6 +140,7 @@ a{text-decoration:none;}
 :-ms-input-placeholder { color: $main; }
 
 
+.imp{color: $dkteal;}
 
 .fz12{font-size: 1.2rem;}
 .fz18{font-size: 1.8rem;}
@@ -153,7 +154,7 @@ a{text-decoration:none;}
 a.logo{
 	display: block;
 	margin: 0 auto;
-	width: 40%;
+	width: 70%;
 }
 /* Main-Nav */
 nav.main{
@@ -175,7 +176,7 @@ nav.main{
 }
 .graphic{display: block; margin: 0 auto;}
 .copy{
-	width: 80%; 
+	width: 80%;
 	margin: 0 auto;
 	font-size: 2.4rem;
 	line-height: 120%;
@@ -217,7 +218,7 @@ nav.main{
 
 }
 .sub a{
-	color: $dkpurple; 
+	color: $dkteal;
 	border-bottom: 2px dotted $main;
 }
 .content > section{
@@ -256,7 +257,7 @@ nav.tabs{
 			&.active a{color: $main;}
 			a{
 				font-size: 2.8rem;
-				color: $dkpurple;
+				color: $apink;
 			}
 		}
 	}
